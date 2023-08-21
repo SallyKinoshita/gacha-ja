@@ -21,11 +21,11 @@ func main() {
 	// 80〜94のときは"R"、95〜98のときは"SR"、
 	// それ以外のときは"XR"と表示する
 	switch {
-	case 0 <= num || num <= 79:
+	case num < 80:
 		fmt.Println("ノーマル")
-	case num <= 94:
+	case num < 95:
 		fmt.Println("R")
-	case num <= 98:
+	case num < 99:
 		fmt.Println("SR")
 	default:
 		fmt.Println("XR")
