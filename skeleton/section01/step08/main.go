@@ -23,7 +23,7 @@ LOOP:
 		fmt.Print(">")
 		var kind int
 		// TODO: 変数kindに入力した値を入れる
-		kind, _ = fmt.Scanln()
+		fmt.Scanln(&kind)
 
 		switch kind {
 		case 1: // 単発ガチャ
