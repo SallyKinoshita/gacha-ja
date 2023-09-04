@@ -58,7 +58,7 @@ func inputN(p *player) int {
 
 func drawN(p *player, n int) ([]card, map[rarity]int) {
 	// TODO: p.ticketsをnだけ減らす
-	p.tickets = p.tickets - n
+	p.tickets -= n
 
 	results := make([]card, n)
 	summary := make(map[rarity]int)
