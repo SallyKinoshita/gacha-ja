@@ -55,10 +55,12 @@ func (p *player) draw(n int) {
 	// ガチャ券から優先的に使う
 	if n <= p.tickets {
 		p.tickets -= n
-	} else {
-		p.tickets = 0
-		p.coin -= n * 10 // 1回あたり10枚消費する
+		return
 	}
+	// memo: これだとチケット分無駄消費では？ nを減らさないと？
+	//n -= p.tickets
+	p.tickets = 0
+	p.coin -= n * 10 // 1回あたり10枚消費する
 }
 
 func main() {
